@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript assignment</title>
+</head>
+<body>
+    <script>
+       name=parseInt(prompt(`SELECT YOUR OPTION
+                    1.Recharge yourself
+                    2.Recharge others
+                    3.Data
+                    4.Transfer`))
+   if (name==1) {
+    number=parseInt(prompt("Enter your phone number"))
+    amount=parseInt(prompt("Enter amount"))
+    confirmm=parseInt(prompt("Are you sure you want to recharge "+ amount+" to "+ number +"\n1.YES"+"\n2.NO"))
+     if (confirmm==1) {
+         alert("Recharge successful")         
+     }
+     else
+        alert("Try again!")
+   }
+   else if(name==2){
+   rnumber=parseInt(prompt("Enter recipient phone number"))
+    ramount=parseInt(prompt("Enter amount"))
+    rconfirmm=parseInt(prompt("Are you sure you want to recharge "+ ramount+" to "+ rnumber +"\n1.YES"+"\n2.NO"))
+    if (rconfirmm==1) {
+         alert("Recharge successful")         
+     }
+     else
+        alert("Try again!")  
+    }   
+    else if (name==3) {
+        dnumber=parseInt(prompt("Enter data amount in mb"))
+        damount=parseInt(prompt("Enter recipient number"))
+        dconfirmm=parseInt(prompt("Are you sure you want to subscribe "+ dnumber+ " mb"+" to "+ damount +"\n1.YES"+"\n2.NO"))
+if (dconfirmm==1) {
+    alert("Data Subscription successful")
+    
+} else {
+    alert("try again")
+}
+
+    }
+    else if(name==4)
+    {
+ bank=prompt(`SELECT BANK
+                1.FIRST BANK 
+                2.GT BANK
+                3.ACCES BANK
+                4.DIAMOND BANK
+                5.UNITY BANK
+                6.PIGGY BANK
+                7.INTERCONTINENTAL BANK
+                8.JAA'IZE BANK`)
+    }
+    acno=parseInt(prompt("Please Enter recipient account number"))
+    bamount=parseInt(prompt("Please Enter Amount"))
+    bconfirmm=parseInt(prompt("Are you sure you want to transfer "+bamount + " naira" +"\n1.YES"+"\n2.NO"))
+    if (bconfirmm==1) {
+    alert("Transfer successful")
+    
+} else {
+    alert("try again")
+}
+
+    
+    </script>
+</body>
+</html>
