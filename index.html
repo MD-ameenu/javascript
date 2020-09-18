@@ -6,65 +6,66 @@
     <title>Javascript assignment</title>
 </head>
 <body>
+    <div id="assignment">
+        
+        
+    </div>
+
     <script>
-       name=parseInt(prompt(`SELECT YOUR OPTION
-                    1.Recharge yourself
-                    2.Recharge others
-                    3.Data
-                    4.Transfer`))
-   if (name==1) {
-    number=parseInt(prompt("Enter your phone number"))
-    amount=parseInt(prompt("Enter amount"))
-    confirmm=parseInt(prompt("Are you sure you want to recharge "+ amount+" to "+ number +"\n1.YES"+"\n2.NO"))
-     if (confirmm==1) {
-         alert("Recharge successful")         
-     }
-     else
-        alert("Try again!")
-   }
-   else if(name==2){
-   rnumber=parseInt(prompt("Enter recipient phone number"))
-    ramount=parseInt(prompt("Enter amount"))
-    rconfirmm=parseInt(prompt("Are you sure you want to recharge "+ ramount+" to "+ rnumber +"\n1.YES"+"\n2.NO"))
-    if (rconfirmm==1) {
-         alert("Recharge successful")         
-     }
-     else
-        alert("Try again!")  
-    }   
-    else if (name==3) {
-        dnumber=parseInt(prompt("Enter data amount in mb"))
-        damount=parseInt(prompt("Enter recipient number"))
-        dconfirmm=parseInt(prompt("Are you sure you want to subscribe "+ dnumber+ " mb"+" to "+ damount +"\n1.YES"+"\n2.NO"))
-if (dconfirmm==1) {
-    alert("Data Subscription successful")
-    
-} else {
-    alert("try again")
+details=
+      `<table>
+            <tr>
+    <th>s/n</th>
+    <th>companyname</th>
+    <th>companyemail</th>
+    <th>companyphonenumber</th>
+    <th>location</th>
+    </tr>
+    <tbody>
+      `
+companies =[
+{ 
+    "name":"Tiidelab",
+    "email":"hello@tidelab.com" ,
+    "phonenumber":12345,
+    "location":"Abuja"
+
+},
+{
+    "name":"goole",
+    "email":"hello@google.com" ,
+    "phonenumber":12345,
+    "location":"Lagos"
+
+
+},
+{
+    "name":"Mart-rech",
+    "email":"hello@martreach.com" ,
+    "phonenumber":12345,
+    "location":"Calabar"
+},
+{
+    "name":"Amazon",
+    "email":"hello@amazon.com" ,
+    "phonenumber":12345,
+    "location":"Kano"
+}]
+
+for(i= 0;i < companies.length; 1++){
+    details += `
+    <tr>
+            <td>${i+1}</td>
+            <td>${companies[i].name}</td>
+            <td>${companies[i].email}</td>
+            <td>${companies[i].phonenumber}</td>
+            <td>${companies[i].location}</td>
+        </tr>`
+        document.getElementById('assignment').innerHTML = details;
+
 }
 
-    }
-    else if(name==4)
-    {
- bank=prompt(`SELECT BANK
-                1.FIRST BANK 
-                2.GT BANK
-                3.ACCES BANK
-                4.DIAMOND BANK
-                5.UNITY BANK
-                6.PIGGY BANK
-                7.INTERCONTINENTAL BANK
-                8.JAA'IZE BANK`)
-    }
-    acno=parseInt(prompt("Please Enter recipient account number"))
-    bamount=parseInt(prompt("Please Enter Amount"))
-    bconfirmm=parseInt(prompt("Are you sure you want to transfer "+bamount + " naira" +"\n1.YES"+"\n2.NO"))
-    if (bconfirmm==1) {
-    alert("Transfer successful")
-    
-} else {
-    alert("try again")
-}
+
 
     
     </script>
